@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parity", "Parity\Parity.csproj", "{00A67DAB-A756-41CB-852E-E48C9D4E0B76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParityNUnitTest", "ParityNUnitTest\ParityNUnitTest.csproj", "{7741622A-64AE-4299-AD76-65EF21E74ABE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00A67DAB-A756-41CB-852E-E48C9D4E0B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A67DAB-A756-41CB-852E-E48C9D4E0B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A67DAB-A756-41CB-852E-E48C9D4E0B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A67DAB-A756-41CB-852E-E48C9D4E0B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7741622A-64AE-4299-AD76-65EF21E74ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7741622A-64AE-4299-AD76-65EF21E74ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7741622A-64AE-4299-AD76-65EF21E74ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7741622A-64AE-4299-AD76-65EF21E74ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6750696B-F310-4C7A-93D8-640D77EBEA79}
+	EndGlobalSection
+EndGlobal
