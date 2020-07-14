@@ -4,16 +4,9 @@ namespace Parity.Library
 {
     public class ParityService
     {
-        public static bool IsEven(int number)
+        public static bool IsOdd(int number)
         {
-            if (number % 2 == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return number % 2 != 0;
         }
     }
 }
