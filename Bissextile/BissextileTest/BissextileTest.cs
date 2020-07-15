@@ -13,23 +13,24 @@ namespace BissextileTest
 
         [TestCase(1)]
         [TestCase(-20)]
-        [TestCase(100)]
-        [TestCase(1)]
-        [TestCase(1)]
-        [TestCase(1)]
-        [TestCase(1)]
+        //[TestCase(100)] now is true
+        [TestCase(1900)]
+        [TestCase(1110)]
+        [TestCase(666)]
+        [TestCase(1709)]
+        [TestCase(9999)]
         public void ShouldReturn_False(int year)
         {
             Assert.That(BissextileServices.IsBissextile(year), Is.False);
         }
 
         [TestCase(4)]
-        [TestCase(4)]
-        [TestCase(4)]
-        [TestCase(4)]
-        [TestCase(4)]
-        [TestCase(4)]
-        [TestCase(4)]
+        //[TestCase(800)] now is true anyways
+        [TestCase(2000)]
+        [TestCase(108)]
+        [TestCase(34020)]
+        [TestCase(1924)]
+        [TestCase(2020)]
         public void ShouldReturn_True(int year)
         {
             Assert.That(BissextileServices.IsBissextile(year), Is.True);
