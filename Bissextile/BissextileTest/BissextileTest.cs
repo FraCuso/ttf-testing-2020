@@ -13,7 +13,7 @@ namespace BissextileTest
 
         [TestCase(1)]
         [TestCase(-20)]
-        [TestCase(1)]
+        [TestCase(100)]
         [TestCase(1)]
         [TestCase(1)]
         [TestCase(1)]
