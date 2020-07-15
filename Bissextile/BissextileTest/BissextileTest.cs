@@ -13,7 +13,6 @@ namespace BissextileTest
 
         [TestCase(1)]
         [TestCase(-20)]
-        //[TestCase(100)] now is true
         [TestCase(1900)]
         [TestCase(1110)]
         [TestCase(666)]
@@ -25,7 +24,7 @@ namespace BissextileTest
         }
 
         [TestCase(4)]
-        //[TestCase(800)] now is true anyways
+        [TestCase(800)]
         [TestCase(2000)]
         [TestCase(108)]
         [TestCase(34020)]
