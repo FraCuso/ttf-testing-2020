@@ -9,13 +9,9 @@ namespace PrimeFactorsService
         public static List<int> Calculate(int x)
         {
             List<int> factors = new List<int>();
-            if (x%2 == 0)
+            if (x != 1)
             {
-                factors.Add(2);
-            }
-            if (x%3 == 0)
-            {
-                factors.Add(3);
+                factors.Add(x);
             }
             return factors;
         }
