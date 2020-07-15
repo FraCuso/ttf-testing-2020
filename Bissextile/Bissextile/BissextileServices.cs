@@ -15,15 +15,11 @@ namespace Bissextile
             {
                 return false;
             }
-            if (year <= 1581 || year % 400 == 0)
+            if (year % 100 != 0 || year <= 1581 || year % 400 == 0)
             {
                 return true;
             }
-            if (year % 100 == 0)
-            {
-                return false;
-            }    
-            return true;
+            return false;
         }
     }
 }
