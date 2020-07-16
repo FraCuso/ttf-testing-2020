@@ -26,7 +26,7 @@ namespace StringCalculatorTest
             var test = StringCalculator.Add("");
 
 
-            Assert.That(test == 0);
+            Assert.That(test.Equals(0));
         }
 
     }
