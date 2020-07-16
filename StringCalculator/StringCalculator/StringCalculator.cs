@@ -40,6 +40,6 @@ namespace StringCalculatorService
                 return Int32.Parse(s);
             }
             return output;
-        }
+        }        
     }
 }

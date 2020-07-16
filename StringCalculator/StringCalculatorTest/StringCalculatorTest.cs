@@ -53,7 +53,7 @@ namespace StringCalculatorTest
         }
 
         [TestCase("54, 32, 1", 87)]
-        [TestCase("1, 1, 1, 1, -1, 1, -1, 1", 6)]
+        [TestCase("1, 1, 1, 1, -1, 1, -1, 1", 4)]
         [TestCase("23, 87, 100, 10000", 10210)]
         public void ShouldAcceptStringWithMoreNumbersAndCommas_AndReturn_Sum(string s, int ris)
         {
