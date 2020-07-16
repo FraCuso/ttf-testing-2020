@@ -30,22 +30,22 @@ namespace StringCalculatorService
             }
             if (s.Contains("//"))
             {
-                tmps = s.Replace(String.Format("//{0}\n", s[s.IndexOf('/') + 2]), "§");
+                s = s.Replace(String.Format("//{0}\n", s[s.IndexOf('/') + 2]), "§");
                 separator = "§";
             }
-            separators = new string[] { ",", "\n" };
+            if (String.IsNullOrEmpty(separator))
+            {
+                separators = new string[] { ",", "\n" };
+            }
+            else
+            {
+                separators = new string[] { ",", "\n", separator };
+            }
 
             if (checker)
             {
                 string[] sarray = null;
-                if (String.IsNullOrEmpty(separator))
-                {
-                    sarray = s.Split(separators, StringSplitOptions.None);                   
-                }
-                else
-                {
-                    sarray = tmps.Split(separator);
-                }
+                sarray = s.Split(separators, StringSplitOptions.None);
                 List<int> numbers = ConvertToInteger(sarray);
                 return numbers.Sum();
             }
