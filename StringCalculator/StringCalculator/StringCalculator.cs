@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace StringCalculatorService
 {
@@ -7,39 +10,57 @@ namespace StringCalculatorService
     {
         public static int Add(string s)
         {
-            int output = 0;
+            string tmps = null;
             if (s.Length == 0)
             {
                 return 0;
             }
-            
-            string[] sarray = s.Split(",");
+            string[] separators = null;
+            string separator = null;
             bool checker = true;
-            string[] sarray2 = null;
-
-            if (sarray.Length > 1)
+            if (!s.Contains(",") && !s.Contains("\n"))
             {
-                for (int k = 0; k < sarray.Length; k++)
+                for (int i = 0; i < s.Length; i++)
                 {
-                    sarray2 = sarray[k].Split("\n"); 
-                    for (int j = 0; j < sarray2.Length; j++)
+                    if (!Char.IsDigit(s[i]))
                     {
-                        output += Int32.Parse(sarray2[j]);
+                        checker = false;
                     }
                 }
             }
-            for (int i = 0; i < s.Length; i++)
+            if (s.Contains("//"))
             {
-                if (!Char.IsDigit(s[i]))
-                {
-                    checker = false;
-                }
+                tmps = s.Replace(String.Format("//{0}\n", s[s.IndexOf('/') + 2]), "§");
+                separator = "§";
             }
+            separators = new string[] { ",", "\n" };
+
             if (checker)
             {
-                return Int32.Parse(s);
+                string[] sarray = null;
+                if (String.IsNullOrEmpty(separator))
+                {
+                    sarray = s.Split(separators, StringSplitOptions.None);                   
+                }
+                else
+                {
+                    sarray = tmps.Split(separator);
+                }
+                List<int> numbers = ConvertToInteger(sarray);
+                return numbers.Sum();
             }
-            return output;
-        }        
-    }
+            return 0;
+
+        }
+
+        public static List<int> ConvertToInteger(string[] sarray)
+        {
+            List<int> numbers = new List<int>();
+            foreach (string item in sarray)
+            {
+                numbers.Add(Int32.Parse(item));
+            }
+            return numbers;
+        }
+    }        
 }

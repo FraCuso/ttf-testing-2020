@@ -72,5 +72,13 @@ namespace StringCalculatorTest
 
             Assert.That(test, Is.EqualTo(ris));
         }
+
+        [TestCase("1//;\n2//;\n3//;\n4", 10)]
+        public void ShouldAcceptStringWithMoreNumbersAndCustomizedSeparatorsAnd_AndReturn_Sum(string s, int ris)
+        {
+            var test = StringCalculator.Add(s);
+
+            Assert.That(test, Is.EqualTo(ris));
+        }
     }
 }
