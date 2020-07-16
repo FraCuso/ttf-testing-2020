@@ -17,7 +17,7 @@ namespace StringCalculatorService
             bool checker = true;
             string[] sarray2 = null;
 
-            if (sarray.Length>1)
+            if (sarray.Length > 1)
             {
                 for (int k = 0; k < sarray.Length; k++)
                 {
