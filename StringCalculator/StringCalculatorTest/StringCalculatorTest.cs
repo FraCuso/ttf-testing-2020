@@ -12,12 +12,22 @@ namespace StringCalculatorTest
         }
 
         [Test]
-        public void Test1()
+        public void ShouldAcceptString_AndReturn_int()
         {
             var test = StringCalculator.Add("hey");
 
             
             Assert.That(test is int);
         }
+
+        [Test]
+        public void ShouldAcceptEmptyString_AndReturn_0()
+        {
+            var test = StringCalculator.Add("");
+
+
+            Assert.That(test == 0);
+        }
+
     }
 }
