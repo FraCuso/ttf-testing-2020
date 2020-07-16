@@ -43,5 +43,13 @@ namespace StringCalculatorTest
             Assert.That(test, Is.EqualTo(3));
         }
 
+        [Test]
+        public void ShouldAcceptStringWithMoreNumbersAndCommas_AndReturn_Sum()
+        {
+            var test = StringCalculator.Add("1,2,3");
+
+            Assert.That(test, Is.EqualTo(6));
+        }
+
     }
 }
