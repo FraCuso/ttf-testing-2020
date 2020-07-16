@@ -16,7 +16,6 @@ namespace StringCalculatorTest
         {
             var test = StringCalculator.Add("hey");
 
-            
             Assert.That(test is int);
         }
 
@@ -25,8 +24,15 @@ namespace StringCalculatorTest
         {
             var test = StringCalculator.Add("");
 
+            Assert.That(test, Is.EqualTo(0));
+        }
 
-            Assert.That(test.Equals(0));
+        [Test]
+        public void ShouldAcceptStringWithNumber_AndReturn_Number()
+        {
+            var test = StringCalculator.Add("74");
+
+            Assert.That(test, Is.EqualTo(74));
         }
 
     }
