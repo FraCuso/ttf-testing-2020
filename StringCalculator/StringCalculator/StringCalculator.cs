@@ -15,12 +15,17 @@ namespace StringCalculatorService
             
             string[] sarray = s.Split(",");
             bool checker = true;
+            string[] sarray2 = null;
 
             if (sarray.Length>1)
             {
                 for (int k = 0; k < sarray.Length; k++)
                 {
-                    output += Int32.Parse(sarray[k]);
+                    sarray2 = sarray[k].Split("\n"); 
+                    for (int j = 0; j < sarray2.Length; j++)
+                    {
+                        output += Int32.Parse(sarray2[j]);
+                    }
                 }
             }
             for (int i = 0; i < s.Length; i++)

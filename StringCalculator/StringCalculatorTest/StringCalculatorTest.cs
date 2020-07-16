@@ -51,5 +51,12 @@ namespace StringCalculatorTest
             Assert.That(test, Is.EqualTo(6));
         }
 
+        [Test]
+        public void ShouldAcceptStringWithMoreNumbersAndMoreSeparatoesAnd_AndReturn_Sum()
+        {
+            var test = StringCalculator.Add("1,2,3\n4");
+
+            Assert.That(test, Is.EqualTo(10));
+        }
     }
 }
