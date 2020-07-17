@@ -10,7 +10,6 @@ namespace StringCalculatorService
     {
         public static int Add(string s)
         {
-            string tmps = null;
             if (s.Length == 0)
             {
                 return 0;
